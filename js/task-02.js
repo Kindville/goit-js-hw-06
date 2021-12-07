@@ -6,31 +6,36 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const list = document.querySelector('#ingredients')
 
-const liEl = document.createElement('li');
-console.log(liEl);
-liEl.textContent = 'Potatoes';
 
-const liElSecond = document.createElement('li');
-console.log(liElSecond);
-liElSecond.textContent = 'Mushrooms';
+const ulEl = document.querySelector('#ingredients')
+const list = ingredients.reduce((str, item) => str+ `<li> ${item}</li>`, '');
 
-const liElThird = document.createElement('li');
-console.log(liElThird);
-liElThird.textContent = 'Garlic';
+ulEl.innerHTML = list;
 
-const liElFourth = document.createElement('li');
-console.log(liElFourth);
-liElFourth.textContent = 'Tomatos';
+// const liEl = document.createElement('li');
+// console.log(liEl);
+// liEl.textContent = 'Potatoes';
 
-const liElFifth = document.createElement('li');
-console.log(liElFifth);
-liElFifth.textContent = 'Herbs';
+// const liElSecond = document.createElement('li');
+// console.log(liElSecond);
+// liElSecond.textContent = 'Mushrooms';
 
-const liElSixth = document.createElement('li');
-console.log(liElSixth);
-liElSixth.textContent = 'Condiments';
+// const liElThird = document.createElement('li');
+// console.log(liElThird);
+// liElThird.textContent = 'Garlic';
 
-list.append(liEl, liElSecond, liElThird, liElFourth, liElFifth, liElSixth);
+// const liElFourth = document.createElement('li');
+// console.log(liElFourth);
+// liElFourth.textContent = 'Tomatos';
+
+// const liElFifth = document.createElement('li');
+// console.log(liElFifth);
+// liElFifth.textContent = 'Herbs';
+
+// const liElSixth = document.createElement('li');
+// console.log(liElSixth);
+// liElSixth.textContent = 'Condiments';
+
+// list.append(liEl, liElSecond, liElThird, liElFourth, liElFifth, liElSixth);
 
