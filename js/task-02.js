@@ -9,9 +9,13 @@ const ingredients = [
 
 
 const ulEl = document.querySelector('#ingredients')
-const list = ingredients.reduce((str, item) => str+ `<li> ${item}</li>`, '');
-
-ulEl.innerHTML = list;
+const list = ingredients.forEach(addIngredient);
+function addIngredient(el) {
+  const liEl = document.createElement('li');
+  liEl.textContent = el;
+  ulEl.append(liEl);
+// console.log(liEl);
+}
 
 // const liEl = document.createElement('li');
 // console.log(liEl);
